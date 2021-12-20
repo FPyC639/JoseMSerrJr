@@ -1,0 +1,116 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending on whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\usepackage{setspace}
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\doublespacing
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+% read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{amsmath} % allow the usage of math symbols, and tools
+\usepackage{hyperref} % allows the usage of hyperlinks for sections in the project
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Second Order Differential Equations, Mechanics, and Electromagnetism}
+\author{Ever Perez, Karam Dalco, and Jose M. Serra Jr.}
+%\date{} % Activate to display a given date or no date (if empty),
+% otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{The Father of Calculus, and Physics Issac Newton}
+
+To begin our query into the understanding of how Differential Equations plays such a significant role in Classical Physics, and even more so in Modern Physics, of course, the focus being on the previous over the latter. One must begin an understanding of the figure of Issac Newton. Issac Newton was a pivotal figure in his age as he laid the groundwork for Calculus and Physics. Establishing now what is the query which this project seeks to answer is the relationships that have been created by Issac Newton with his work in Classical Physics in both his work in Calculus and Physics. Some of the relations we seek to answer are how the material which was learned in the second-year course of Differential Equations is used by physicists, and mathematicians to model real-world phenomena. The phenomena which are going to go into detail are the following, a simple pendulum, spring, and inductor, resistor, and capacitor circuit.
+
+\newpage
+\section{Mechanics}
+\subsection{Spring}
+To begin to understand how the underpinnings which we have learned in the course take flight, one can examine the system or syntax of physics. and laws of motion proposed by Sir Issac Newton. One of the very fundamental things that must be understood is the position function, which comes in two forms displacement, and distance. Displacement is how far one is from an initial position, meanwhile, distance is how far one has traveled. \begin{align*} \end{align*} Using a calculus operator which is a derivative operator one can get the velocity function. The law specifically which we will be looking at is the Second Law of Motion. The law goes a little bit like this \begin{equation}\sum \hat{F} = m\hat{a} \end{equation} 
+
+\newpage
+
+\subsubsection{Spring in Equilibrium Calculation}
+\begin{equation} mx''=-kx\end{equation} The equation can be converted into a linear-homogenous second-order ordinary differential equation. \begin{equation} mx''+kx=0\\ \end{equation} To solve this ordinary differential equation we can make use of the auxiliary equation, but first we would need to make a necessary substitution. The following substitution $\omega=\sqrt{\frac km}$, brings us to the following Ordinary Differential Equation, which is both linear, and homogenous. \begin{equation}x''+\omega^2x=0 \end{equation} Our next steps would be to solve the problem by constant coefficients and making use of the auxiliary equation. \begin{align*}m^2+\omega^2=0 \\ m^2=-\omega^2 \\ m = \pm\omega i\end{align*} This then gives the solutions to the differential equation: \begin{equation} x=c_1\cos(\omega t)+c_2\sin(\omega t)\end{equation}
+\newpage
+\subsubsection{Problem}
+One of the classical prospects of math is combining a solution into a simpler form here the parametrization involves the following: \begin{equation} x=c_1\cos(\omega t)+c_2\sin(\omega t) \end{equation} Uniting the following two trigonometric solutions into one trigonometric solution can promote a useful solution. The following steps would be required to bring it to the following form: \begin{equation}x=c\cos(\omega t +\phi) \end{equation} To achieve that parametrizations one can do the following: \begin{align*}c&=\sqrt{c_1^2+c_2^2} \\ \tan(\phi)&=\frac{c_2}{c_1} \end{align*} One of the following ways one can show how this parametrizations works out is by subsuming in different values, such as different initial constraints. Showing this by two plugins, about how the solution works
+\newpage
+\subsection{Pendulum, and Problem}
+Another physical phenomenon that can has been related in analog to the spring system is that of the Pendulum, specifically the simple pendulum. The simple pendulum has a differential equation that looks like the following.
+\begin{align*}mg\sin(\theta) + mL\frac{d^2\theta}{dt^2}= 0\end{align*} However, due to using the small angle approximation, the physics used for much smaller angles creates a better approximation for smaller angles. What that means is that one can revert it in a simple differential equation that were taught in the introductory differential equation course\begin{align*} \frac{d^2\theta}{dt^2}+\frac{g}{L}\theta&=0 \\ \omega^2 &= \frac{g}{L}\end{align*} \begin{equation} \theta(t)= A\cos(\omega t) + B\sin(\omega t)\end{equation} A neat tad bit is that the same parametrization yields the similar result as the spring system.\begin{equation}x=c\cos(\omega t +\phi) \end{equation}
+\newpage
+\section{Electromagnetism}
+\subsection{RLC Circuit}
+Circuit analysis is another field impacted by differential equations; the scope applies to much of how each individual element behaves in a circuit one fundamental. A circuit is a system of elements some that oppose current flow like a resistor, others that store energy in an electric field like a capacitor, and others that store energy in a magnetic field such as an inductor. These three circuit elements are some of the important circuit elements that one must create very useful appliances such as microwaves, and TV's and much more.
+\newpage
+\subsubsection{RLC Circuit Calculation}
+The following equation is the derived from the LC circuit: \begin{equation} L\frac{dI}{dt}+\frac{Q}{C}=0\end{equation} This equation is homogenous, however, it is not the right equation that one is looking for if its supposed to model the LRC Circuit, therefore one has to include the resistor in that case.
+\begin{equation}L\frac{dI}{dt}+\frac{Q}{C}+IR=0 \end{equation} Now substituting that $I=\frac{dQ}{dt}$ using this relationship one can do the following: \begin{equation}L\frac{d^2Q}{dt^2}+R\frac{dQ}{dt}+\frac{Q}{C}=0 \end{equation}
+However one is not done there if one divides out through by the L one gets the following: \begin{equation*}\frac{d^2Q}{dt^2}+\frac{R}{L}\frac{dQ}{dt}+\frac{Q}{LC}=0 \end{equation*} Making the substitution that $2\kappa = \frac{R}{L}$,$\frac{1}{LC}=\omega^2$, then one has the following: \begin{equation}\frac{d^2Q}{dt^2}+2\kappa\frac{dQ}{dt}+\omega^2{Q} =0\end{equation} This equation is now in a much useful format for the problem that is at hand which is solving the differential equation.
+\newpage
+\subsubsection{Problem}
+If one makes use of the following integrating factor one gets the following: \begin{equation*}Q(t)=u(t)e^{-\kappa t} \end{equation*} Which leads us to make sure of the following substitutions \begin{align*}Q(t)&=u(t)e^{-\kappa t} \\ Q'(t)&= u'e^{-\kappa t}-\kappa e^{-\kappa t} u \\ Q''(t)&= u''e^{-\kappa t}- 2\kappa e^{-\kappa t} u'+\kappa^2 e^{-\kappa t} u \end{align*} \begin{equation*} u''e^{-\kappa t}- 2\kappa e^{-\kappa t} u'+\kappa^2 e^{-\kappa t} u+2\kappa (u'e^{-\kappa t}-\kappa e^{-\kappa t} u)+\omega^2 u(t)e^{-\kappa t}=0\end{equation*} \begin{equation*} u''+(\omega^2-\kappa^2)u=0\end{equation*} Using the substitution that $\alpha^2 =\omega^2-\kappa^2$ One gets the following solution: \begin{equation*} u(t)= A\cos(\alpha t-\phi)\end{equation*} Then substituting in that u for the integrating factor one gets the following: \begin{equation}Q(t)=A\cos(\alpha t-\phi) e^{-\kappa t} \end{equation}
+Now there is also another problem, that is the cases for the problem that we are doing at hand. The cases are whether the system is critically damped, under-damped, and over-damped. Now there would have to be a slight mention of what these things particularly mean in the context of the problem the resistance squared is greater than 4 times  the value of the inductor divided by the value of the capacitor, or $R^2>4\frac{L}{C}$. Critically-damped if the following is true, $R^2=4\frac{L}{C}$, and under-damped if the following is true $R^2<4\frac{L}{C}$. The follow calculation addresses the second part of the problem. Using this equation on can begin to assess the problem: \begin{equation*}
+\frac{d^2Q}{dt^2}+2\kappa\frac{dQ}{dt}+\omega^2{Q} =0
+\end{equation*} The problem can then assessed with the auxiliary equation which made of use by the following: \begin{equation*}
+m^2+2\kappa m+ \omega^2 = 0
+\end{equation*}
+Solving for the homogeneous one gets the following solving for the first case. $R^2>-4L/C$ \begin{align*}
+m_1&=-\kappa+\sqrt{\kappa^2-\omega^2} \\ m_2&=-\kappa-\sqrt{\kappa^2+\omega^2}
+\end{align*}
+When $\omega>\kappa$ there are two distinct roots. When $\omega<\kappa$ Two imaginary solutions: \begin{align*} m_1&=-\kappa+\sqrt{\omega^2-\kappa^2}i \\ m_2&=-\kappa+\sqrt{\omega^2-\kappa^2}i \end{align*} When $\omega=\kappa$ Gives two equal roots.
+\newpage
+\section{Conclusion}
+The project overall gave aspects which were taught in the course, a new life, and fresher meaning. With this new breath on can begin to see the scope of the possible applications of the course in engineering, and sciences coursework and research. That is meaningful in the way that one can sort of see the applications, and no more the theory that is behind the math one has gone over in our two-year college experience. However, that does not give up saying that such other courses were not useful, is that finding out the applications brings a deeper sense of understanding of real world phenomena. 
+\end{document}
+
+
