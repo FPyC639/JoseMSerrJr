@@ -1,0 +1,1 @@
+Java has been an interesting lanaguage to grow and develop from it. Here I will be showcasing some of the course work which I have made privilaged to do during my studies that refelect how I am as programmer.
