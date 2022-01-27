@@ -6,25 +6,57 @@
 * Homework  1, task 1, 2, 3, ....
 * Program Description:
 *************************************************************************/
-enum Color{
-    WHITE, BROWN, BLACK, GRAY
+package HW1;
+
+import java.util.*;
+import HW1.Color;
+
+abstract class AbstractCat {
+    String name;
+    double age;
+    Color color;
+    String type;
+    static int NumberofCats;
+
+    public long dateofBirth(Date DOB) {
+        Date date1 = new Date();
+        return Math.abs(date1.getTime() - DOB.getTime());
+    };
+
+    public void dateofBirth_Processed(Date DOB) {
+        long secondsInMilli = 1000L;
+        long minutesInMilli = secondsInMilli * 60;
+        long hoursInMilli = minutesInMilli * 60;
+        long daysInMilli = hoursInMilli * 24;
+        long monthInMilli = daysInMilli * 30;
+        long yearInMilli = monthInMilli * 12;
+        long elapsedyear = dateofBirth(DOB) / yearInMilli;
+        long difference = dateofBirth(DOB) % yearInMilli;
+        long elapsedmonth = difference / monthInMilli;
+        difference = difference % monthInMilli;
+        long elapsedday = difference / daysInMilli;
+        difference = difference % daysInMilli;
+        System.out.printf("My age is %d years, %d months, %d days.\n", elapsedyear,elapsedmonth,elapsedday);
+
+    }
+
 }
 
-
-public class Cat{
+public class Cat extends AbstractCat {
 
     private String name;
     private double age;
     private Color color;
     private String type;
-    private static int NumberofCats = 0; 
+    private static int NumberofCats;
 
-    public Cat(){
+    public Cat() {
         super();
         NumberofCats++;
 
     }
-    public Cat(String name,int age,Color color,String type){
+
+    public Cat(String name, int age, Color color, String type) {
         super();
         this.name = name;
         this.age = age;
@@ -33,61 +65,68 @@ public class Cat{
         NumberofCats++;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    public double getAge(){
+    public double getAge() {
         return this.age;
     }
 
-    public void setAge(double age){
+    public void setAge(double age) {
         this.age = age;
     }
 
-    public Color getColor(){
+    public Color getColor() {
         return this.color;
     }
 
-    public void setColor(Color color){
+    public void setColor(Color color) {
         this.color = color;
     }
 
-    public String getType(){
+    public String getType() {
         return this.type;
     }
 
-    public void setType(String type){
+    public void setType(String type) {
         this.type = type;
     }
 
-    public int NOC(){
-        return this.NumberofCats;
+    public String eat() {
+        return "Eats Gravy Swirlers!";
     }
 
-    public String toString(){
-        return "Cat[ name: " + this.name + ", age: " + this.age + ", color: "+ this.color + ", type: " + this.type+ "]";
-    }
-
-    public static void main(String[] args){
-
-        var cat1 = new Cat();
-        cat1.setName("Miah");
-        cat1.setAge(.5);
-        cat1.setColor(Color.GRAY);
-        cat1.setType("domestic");
-        System.out.println(cat1.NOC());
-        System.out.println(cat1.toString());
-        var cat2 = new Cat("Mikey",9,Color.GRAY,"domestic");
-        System.out.println(cat2.NOC());
-        System.out.println(cat2.toString());
-
-
+    public String play(String toy) {
+        if (toy == "") {
+            return "I like to hide!";
+        } else {
+            return "I love to play with " + toy + "!!!";
+        }
 
     }
 
+    public int NOC() {
+        return Cat.NumberofCats;
+    }
+
+    @Override
+    public long dateofBirth(Date DOB) {
+        return super.dateofBirth(DOB);
+    }
+
+    @Override
+    public void dateofBirth_Processed(Date DOB) {
+        super.dateofBirth_Processed(DOB);
+    }
+
+    public String toString() {
+        return "Cat[ name: " + this.name + ", age: " + this.age + ", color: " + this.color + ", type: " + this.type
+                + "]";
+    }
 
 }
