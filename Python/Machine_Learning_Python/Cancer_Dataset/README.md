@@ -1,9 +1,7 @@
 
 ---
-
-_You are currently looking at **version 1.3** of this notebook. To download notebooks and datafiles, as well as get help on Jupyter notebooks in the Coursera platform, visit the [Jupyter Notebook FAQ](https://www.coursera.org/learn/python-machine-learning/resources/bANLa) course resource._
-
----
+Material from Applied Machine Course University of Michigan
+--
 
 # Assignment 1 - Introduction to Machine Learning
 
@@ -42,15 +40,9 @@ How many features does the breast cancer dataset have?
 
 
 ```python
-# You should write your whole answer within the function provided. The autograder will call
-# this function and compare the return value against the correct solution value
 def answer_zero():
-    # This function returns the number of features of the breast cancer dataset, which is an integer. 
-    # The assignment question description will tell you the general format the autograder is expecting
     return len(cancer['feature_names'])
 
-# You can examine what your function returns by calling it in the cell. If you have questions
-# about the assignment formats, check out the discussion forums for any FAQs
 answer_zero() 
 ```
 
